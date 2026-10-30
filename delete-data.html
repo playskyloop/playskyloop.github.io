@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Delete my data · Skyloop Drones</title>
+<meta name="description" content="How to delete your Skyloop Drones data." />
+<link rel="icon" href="assets/icon.png" />
+<link rel="stylesheet" href="assets/site.css" />
+</head>
+<body>
+<header><img src="assets/icon.png" alt="" /><a class="brand" href="index.html">Skyloop Drones</a></header>
+<nav><a href="index.html">Home</a><a href="privacy.html">Privacy policy</a><a href="delete-data.html" aria-current="page">Delete my data</a></nav>
+<main>
+  <h1>Delete my data</h1>
+  <p>You can delete everything Skyloop Drones has stored about you, at any time.</p>
+
+  <h2>Fastest: in the game</h2>
+  <ol>
+    <li>Open the menu and choose <b>Settings</b>, then scroll to <b>Privacy</b>. Or use the save screen.</li>
+    <li>Tap <b>Delete my data</b>, then <b>Yes, delete</b>. (No is selected first, so you can't delete by accident.)</li>
+  </ol>
+  <p>This deletes, straight away:</p>
+  <ul>
+    <li>your Challenge scoreboard entries, current and past</li>
+    <li>any Challenge prize money waiting for your saves</li>
+    <li>your bug reports, including any files and voice notes</li>
+    <li>every career save and setting on that device</li>
+  </ul>
+  <div class="box"><b>Career saves can't be brought back.</b> If you want to keep one, use <b>Export</b> on the save screen first.</div>
+
+  <h2>By email</h2>
+  <p>If you no longer have the game, or want us to do it for you, email us. Include your player name, and your <b>player ID</b> if you have it (it is shown in the Delete my data box in the game). We'll delete your data within 30 days and reply to confirm.</p>
+  <form id="ask" class="box" onsubmit="return send(event)">
+    <label for="nm">Player name</label>
+    <input id="nm" maxlength="40" autocomplete="off" />
+    <label for="pid">Player ID (optional)</label>
+    <input id="pid" maxlength="60" autocomplete="off" placeholder="p…" />
+    <p><button class="btn primary" type="submit">Write the email</button></p>
+    <p class="muted">This opens your email app with the request filled in. Nothing is sent until you press send there.</p>
+  </form>
+  <p>Or write to <a href="mailto:playskyloop@gmail.com?subject=Skyloop%20data%20deletion">playskyloop@gmail.com</a> directly.</p>
+
+  <h2>What isn't kept anyway</h2>
+  <p>Multiplayer positions are only held during a match, and internet addresses are not saved. Server logs that mention a player name are removed automatically after a few weeks. See the <a href="privacy.html">privacy policy</a>.</p>
+</main>
+<script>
+function send(e) {
+  e.preventDefault();
+  var n = document.getElementById('nm').value.trim();
+  var p = document.getElementById('pid').value.trim();
+  var body = 'Please delete my Skyloop Drones data.\n\nPlayer name: ' + (n || '(not given)') + '\nPlayer ID: ' + (p || '(not given)') + '\n';
+  location.href = 'mailto:playskyloop@gmail.com?subject=' + encodeURIComponent('Skyloop data deletion') + '&body=' + encodeURIComponent(body);
+  return false;
+}
+</script>
+<footer>Contact: <a href="mailto:playskyloop@gmail.com">playskyloop@gmail.com</a> · Skyloop Drones</footer>
+</body></html>

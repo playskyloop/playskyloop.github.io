@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Delete my data · Skyloop Drones</title>
-<meta name="description" content="How to delete your Skyloop Drones data." />
+<title>Delete my data · Skyloop</title>
+<meta name="description" content="How to delete your Skyloop data." />
 <link rel="icon" href="assets/icon.png" />
 <link rel="stylesheet" href="assets/site.css" />
 </head>
 <body>
-<header><img src="assets/icon.png" alt="" /><a class="brand" href="index.html">Skyloop Drones</a></header>
-<nav><a href="index.html">Home</a><a href="privacy.html">Privacy policy</a><a href="delete-data.html" aria-current="page">Delete my data</a></nav>
+<header><img src="assets/icon.png" alt="" /><a class="brand" href="index.html">Skyloop</a></header>
+<nav><a href="index.html">Home</a><a href="privacy.html">Privacy policy</a><a href="delete-data.html" aria-current="page">Delete my data</a><a href="testers/">Become a tester</a></nav>
 <main>
   <h1>Delete my data</h1>
-  <p>You can delete everything Skyloop Drones has stored about you, at any time.</p>
+  <p>You can delete everything Skyloop has stored about you, at any time.</p>
 
   <h2>Fastest: in the game</h2>
   <ol>
@@ -49,10 +49,10 @@ function send(e) {
   e.preventDefault();
   var n = document.getElementById('nm').value.trim();
   var p = document.getElementById('pid').value.trim();
-  var body = 'Please delete my Skyloop Drones data.\n\nPlayer name: ' + (n || '(not given)') + '\nPlayer ID: ' + (p || '(not given)') + '\n';
+  var body = 'Please delete my Skyloop data.\n\nPlayer name: ' + (n || '(not given)') + '\nPlayer ID: ' + (p || '(not given)') + '\n';
   location.href = 'mailto:playskyloop@gmail.com?subject=' + encodeURIComponent('Skyloop data deletion') + '&body=' + encodeURIComponent(body);
   return false;
 }
 </script>
-<footer>Contact: <a href="mailto:playskyloop@gmail.com">playskyloop@gmail.com</a> · Skyloop Drones</footer>
+<footer>Contact: <a href="mailto:playskyloop@gmail.com">playskyloop@gmail.com</a> · Skyloop</footer>
 </body></html>
